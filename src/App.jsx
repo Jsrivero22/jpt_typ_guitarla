@@ -44,14 +44,14 @@ function App() {
         //     if (item.id === id && item.quantity < MAX_ITEMS) {
         //         return {
         //             ...item,
-        //             quantity: item.quantity++
+        //             quantity: item.quantity + 1
         //         }
         //     }
         //         return item;
         // })
         // setCart( updatedCart );
 
-        setCart( prevCart => prevCart.map( item => item.id === id && item.quantity < MAX_ITEMS ? { ...item, quantity: item.quantity++ } : item));
+        setCart( prevCart => prevCart.map( item => item.id === id && item.quantity < MAX_ITEMS ? { ...item, quantity: item.quantity + 1 } : item));
     }
 
     const decreaseQuantity = id => {
@@ -60,14 +60,14 @@ function App() {
         //     if (item.id === id && item.quantity > MIN_ITEMS) {
         //         return {
         //             ...item,
-        //             quantity: item.quantity--
+        //             quantity: item.quantity - 1
         //         }
         //     }
         //         return item;
         // });
         // setCart( updatedCart );
 
-        setCart( prevCart => prevCart.map( item => item.id === id && item.quantity > MIN_ITEMS ? { ...item, quantity: item.quantity-- } : item));
+        setCart( prevCart => prevCart.map( item => item.id === id && item.quantity > MIN_ITEMS ? { ...item, quantity: item.quantity - 1 } : item));
 
     }
 
